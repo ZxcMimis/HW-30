@@ -1,0 +1,40 @@
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+    }
+
+    .animation-block {
+        width: 100px;
+        height: 100px;
+        background-color: #3498db;
+        position: relative;
+        animation: moveSquare 4s infinite linear;
+    }
+
+    @keyframes moveSquare {
+
+        0%,
+        100% {
+            left: 0;
+            top: 0;
+        }
+
+        25% {
+            left: calc(100% - 100px);
+            top: 0;
+        }
+
+        50% {
+            left: calc(100% - 100px);
+            top: calc(100% - 100px);
+        }
+
+        75% {
+            left: 0;
+            top: calc(100% - 100px);
+        }
+    }
